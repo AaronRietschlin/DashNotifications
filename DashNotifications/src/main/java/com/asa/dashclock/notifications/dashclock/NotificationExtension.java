@@ -2,7 +2,7 @@ package com.asa.dashclock.notifications.dashclock;
 
 import android.content.Intent;
 
-import com.asa.dashclock.notifications.MainActivity;
+import com.asa.dashclock.notifications.SettingsActivity;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 
@@ -18,7 +18,7 @@ public class NotificationExtension extends DashClockExtension {
 
         // TODO This is test data
         ExtensionData data = new ExtensionData();
-        data.clickIntent(new Intent(getApplicationContext(), MainActivity.class)).contentDescription("Test Data for now.").expandedBody("Expanded Body content.").expandedTitle("Expanded title");
+        data.clickIntent(new Intent(getApplicationContext(), SettingsActivity.class)).contentDescription("Test Data for now.").expandedBody("Expanded Body content.").expandedTitle("Expanded title");
         publishUpdate(data);
     }
 }
